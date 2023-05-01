@@ -10,6 +10,16 @@ The compresion used for TOTK seems to be an modification of Facebooks [zStandard
 
 ![image](https://user-images.githubusercontent.com/80713508/235522067-ef258a58-7eed-4bf3-8d07-2e47d1879201.png)
 
+I also wrote a script to utilize the latest stable version of zStandard (1.5.5), and it threw the following exception:
+```
+Dictionary mismatch
+```
+
+However, some compressed files seem to decompress fine, like `.bntx.zs` for example.
+```
+full list wip...
+```
+
 ## .bwav (Sound)
 
 Most bwav file file seem to play fine in [foobar2000](https://www.foobar2000.org/) (with the [vgmStream](https://github.com/vgmstream/vgmstream) plugin), however some files (notably in the `Voice/Resource/XXcc/EventFlowMsg` folders) fail to play.
