@@ -15,7 +15,8 @@ I also wrote a script to utilize the latest stable version of zStandard (1.5.5),
 Dictionary mismatch
 ```
 
-However, some compressed files seem to decompress fine, like `.bntx.zs` for example.
+However, some compressed files seem to decompress fine, like `.bntx.zs` for example.<br>
+These files can also be opened with [Switch Toolbox](https://github.com/KillzXGaming/Switch-Toolbox)
 
 The files with these extensions seem to decompress fine, although not every file with these extensions was tested:
 ```json
