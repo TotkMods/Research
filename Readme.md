@@ -16,9 +16,20 @@ Dictionary mismatch
 ```
 
 However, some compressed files seem to decompress fine, like `.bntx.zs` for example.
+
+The files with these extensions seem to decompress fine, although not every file with these extensions was tested:
+```json
+[
+  ".bars.zs",
+  ".bntx.zs",
+  ".rsizetable.zs",
+  ".ta.zs",
+  ".vsts.zs"
+]
 ```
-full list wip...
-```
+
+[extensions-zs-fail.list.json](./research/extensions-zs-fail.list.json)
+[extensions-zs-good.list.json](./research/extensions-zs-good.list.json)
 
 ## .bwav (Sound)
 
