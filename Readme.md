@@ -28,7 +28,7 @@ The files with these extensions seem to decompress fine, although not every file
 ]
 ```
 
-[extensions-zs-fail.list.json](./research/extensions-zs-fail.list.json) | [extensions-zs-good.list.json](./research/extensions-zs-good.list.json)
+[ZS Failed Extensions](./Analyze/extensions-zs-fail.list.json) | [ZS Good Extensions](./Analyze/extensions-zs-good.list.json)
 
 ## .bwav (Sound)
 
