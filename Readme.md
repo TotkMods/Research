@@ -6,30 +6,13 @@ File research for Tears of the Kingdom
 
 ## .zs (Compression)
 
-The compresion used for TOTK seems to be an modification of Facebooks [zStandard](http://facebook.github.io/zstd/) compression algorithm. Using an extension of [7-Zip](https://github.com/mcmilk/7-Zip-zstd/releases) I was able to see the an entry for the decompressed file, but it registers as a 0 byte file and can't be extracted.
+~~The compresion used for TOTK seems to be an modification of Facebooks [zStandard](http://facebook.github.io/zstd/) compression algorithm. Using an extension of [7-Zip](https://github.com/mcmilk/7-Zip-zstd/releases) I was able to see the an entry for the decompressed file, but it registers as a 0 byte file and can't be extracted.~~
 
-![image](https://user-images.githubusercontent.com/80713508/235522067-ef258a58-7eed-4bf3-8d07-2e47d1879201.png)
+~~I also wrote a script to utilize the latest stable version of zStandard (1.5.5), and it threw the following exception:~~
 
-I also wrote a script to utilize the latest stable version of zStandard (1.5.5), and it threw the following exception:
-```
-Dictionary mismatch
-```
+### Update:
 
-However, some compressed files seem to decompress fine, like `.bntx.zs` for example.<br>
-These files can also be opened with [Switch Toolbox](https://github.com/KillzXGaming/Switch-Toolbox)
-
-The files with these extensions seem to decompress fine, although not every file with these extensions was tested:
-```json
-[
-  ".bars.zs",
-  ".bntx.zs",
-  ".rsizetable.zs",
-  ".ta.zs",
-  ".vsts.zs"
-]
-```
-
-[ZS Failed Extensions](./Analyze/Extensions.ZS.Fail.list.json) | [ZS Good Extensions](./Analyze/Extensions.ZS.Good.List.json)
+***Files can be decompressed with [Totk.ZStd Tool](https://github.com/TotkMods/Totk.ZStdTool)***
 
 ## .bwav (Sound)
 
