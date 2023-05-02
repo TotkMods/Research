@@ -7,7 +7,7 @@
 
 | Position | Data Type | Description |
 |:--------:|:---------:|:---------------|
-| 0x00     | char[8]   | Magic? |
+| 0x00     | char[8]   | `P◇◇◇6PK0`/`50 00 11 00 36 50 4B 30` Magic? |
 | 0x08     | UInt16    | Texture Height |
 | 0x0A     | UInt16    | Texture Width |
 | 0x0C     | UInt16    | `01 00` (1, always 1?) |
