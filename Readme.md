@@ -24,3 +24,13 @@ A lot of files seem to be just uncompressed BYML v7 files, with the .bgyml exten
 ## .bkres (compressed)
 
 Bkres files are just SARC archives with a single(?) BYML file inside of them.
+
+## .bphsh
+> **B**inary **Ph**ive **SH**(?)
+
+Updated havok file format (Phive), seems to be used for RigidBodies and StaticCompound
+
+## .bphnm
+> **B**inary **Ph**ive **N**av **M**esh
+
+Updated havok file format (Phive) used for NavMesh
