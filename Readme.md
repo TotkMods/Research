@@ -6,12 +6,6 @@ File research for Tears of the Kingdom
 
 ## .zs (Compression)
 
-~~The compresion used for TOTK seems to be an modification of Facebooks [zStandard](http://facebook.github.io/zstd/) compression algorithm. Using an extension of [7-Zip](https://github.com/mcmilk/7-Zip-zstd/releases) I was able to see the an entry for the decompressed file, but it registers as a 0 byte file and can't be extracted.~~
-
-~~I also wrote a script to utilize the latest stable version of zStandard (1.5.5), and it threw the following exception:~~
-
-### Update:
-
 ***Files can be decompressed with [Totk.ZStd Tool](https://github.com/TotkMods/Totk.ZStdTool)***
 
 ## .bwav (Sound)
@@ -25,4 +19,8 @@ Unable to open item for playback (Unsupported format or corrupted file):
 
 ## .bgyml (Params, BYML)
 
-A lot of files seem to be just uncompressed BYML files, with the .bgyml extension. I haven't tried editing them yet, but I can read them with [Switch Toolbox](https://github.com/KillzXGaming/Switch-Toolbox) just fine.
+A lot of files seem to be just uncompressed BYML v7 files, with the .bgyml extension. I haven't tried editing them yet, but I can read them with [Switch Toolbox](https://github.com/KillzXGaming/Switch-Toolbox) just fine.
+
+## .bkres (compressed)
+
+Bkres files are just SARC archives with a single(?) BYML file inside of them.
