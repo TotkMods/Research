@@ -215,7 +215,7 @@ Updated RSTB table (RESTBL), spec can be found in [Totk.Analyze/src/Formats/REST
 
 ## .sarc
 
-SARC archives (see [.pack](#.pack))
+SARC archives (see [.pack](#pack))
 
 ## .ta
 
