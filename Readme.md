@@ -50,7 +50,7 @@ Audio archive format (unknown changes from Botw)
 
 ## .beco
 
-Liekly LoadMgr from [Botw](https://zeldamods.org/wiki/LoadBalancer.beco)
+Likely part of the LoadMgr from [Botw](https://zeldamods.org/wiki/LoadBalancer.beco)
 
 ## .belnk
 
@@ -64,7 +64,7 @@ Likely the XLink2 file format from Botw and Splatoon (ELink variant)
 
 ## .bfevfl
 
-Eventflow file form,at v1 (no noted changes from Botw)
+Eventflow file format v1 (no noted changes from Botw)
 
 ## .bfres
 
@@ -78,7 +78,7 @@ BFRES v10
 
 ## .bgyml
 
-BYML v7, unknwon changes from v4
+BYML v7, unknown changes from v4 (except version in header)
 
 ## .bhtmp
 
@@ -148,7 +148,7 @@ Unable to open item for playback (Unsupported format or corrupted file):
 
 ## .byml
 
-BYML v7, unknwon changes from v4
+BYML v7, unknown changes from v4 (except version in header)
 
 ## .cai
 
@@ -201,7 +201,7 @@ SARC archives, no noted changes from Botw
 
 ## .png
 
-I don't think I need to explain thius one
+I don't think I need to explain this one
 
 ## .quad
 
@@ -251,4 +251,4 @@ TexToGo texture format
 
 ## .webm
 
-PRe-rendered cutscenes (compressed)
+Pre-rendered cutscenes (compressed)
