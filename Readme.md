@@ -139,7 +139,7 @@ Likely the XLink2 file format from Botw and Splatoon (SLink variant)
 
 ## .bwav
 
-Most bwav file file seem to play fine in [foobar2000](https://www.foobar2000.org/) (with the [vgmStream](https://github.com/vgmstream/vgmstream) plugin), however some files (notably in the `Voice/Resource/XXcc/EventFlowMsg` folders) fail to play.
+Most bwav files seem to play fine in [foobar2000](https://www.foobar2000.org/) (with the [vgmStream](https://github.com/vgmstream/vgmstream) plugin), however some files (notably in the `Voice/Resource/XXcc/EventFlowMsg` folders) fail to play. The headers of these files appear to have an incorrect sample count.
 
 ```
 Unable to open item for playback (Unsupported format or corrupted file):
@@ -193,7 +193,7 @@ Digital image format
 ## .mc
 > MCPK
 
-Unknwon archive/compression format wrapped around the model fles (bfres v10)
+MeshCodec, an archive/compression format wrapped around the model fles (bfres v10)
 
 ## .pack
 
