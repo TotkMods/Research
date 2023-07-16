@@ -81,10 +81,7 @@ BFRES v10
 BYML v7, unknown changes from v4 (except version in header)
 
 ## .bhtmp
-
-```
-...
-```
+Height related data. Explenation on structure [here](Formats/bhtmp.md).
 
 ## .bkres
 
