@@ -10,9 +10,10 @@ File research for Tears of the Kingdom
 
 ## .ainb
 
-```
-...
-```
+**AI** **N**ode **B**inary
+
+Python library availible here:
+https://github.com/dt-12345/ainb
 
 ## .asb
 
