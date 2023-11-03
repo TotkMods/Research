@@ -61,6 +61,8 @@ Node-based animation sequence format
 ## .baev
 > **B**inary **A**nimation **Ev**ent
 
+Format for storing data about animation events
+
 ## .bagst
 > **B**inary **A**udio **G**roup **S**e**t**tings
 
@@ -120,7 +122,7 @@ BFRES v10
 ## .bgyml
 > **B**inary **G**enerated **Y**A**ML** (???)
 
-BYML v7, new node types added
+BYML v7, several new node types added
 
 ## .bhtmp
 > **B**inary **H**eigh**t** **M**a**p**
@@ -203,6 +205,8 @@ Some type of shader format
 
 Audio resource format
 
+[Documentation](https://gota7.github.io/Citric-Composer/specs/binaryWav.html)
+
 Most bwav files seem to play fine in [foobar2000](https://www.foobar2000.org/) (with the [vgmStream](https://github.com/vgmstream/vgmstream) plugin), however some files (notably in the `Voice/Resource/XXcc/EventFlowMsg` folders) fail to play. The headers of these files appear to have an incorrect sample count.
 
 ```
@@ -227,7 +231,7 @@ Stores position and rotation data for Autobuild constructions
 
 .totkab also exists which is the same format but with an additional header
 
-[Graphical CAI Editor]()
+[Graphical CAI Editor](http://dev.ssmvc.org:8080/bleh.html)
 
 ## .chunk
 
@@ -264,10 +268,14 @@ Shader format
 
 Shader format
 
+[Documentation](https://github.com/kinnay/Nintendo-File-Formats/wiki/Gfx2-File-Format)
+
 ## .hght
 > **H**ei**ght**
 
 Height map format (no noted changes since *BotW*)
+
+[Documentation](https://github.com/handsomematt/botw-modding/blob/master/docs/file_formats/hght.md)
 
 ## .jpg
 
@@ -277,6 +285,8 @@ Digital image format
 > **Mate**rial
 
 Material data format (no noted changes since *BotW*)
+
+[Documentation](https://github.com/handsomematt/botw-modding/blob/master/docs/file_formats/mate.md)
 
 ## .mc
 > **M**esh**C**odec
@@ -289,6 +299,8 @@ MeshCodec, an archive/compression format wrapped around the model fles (bfres v1
 > **M**essage **S**tudio **B**inary **T**ext
 
 Stores text data and localization info
+
+[Documentation](https://acmods.org/wiki/New_Horizons:MSBT) and [Functions](https://acmods.org/wiki/New_Horizons:MSBT_functions)
 
 ## .pack
 
@@ -328,10 +340,14 @@ SARC archives (see [.pack](#pack))
 
 Save data file format
 
+[Save Game Editor](https://www.marcrobledo.com/savegame-editors/zelda-totk/)
+
 ## .sharcb
 > **Sh**ader **Arc**hive **B**inary
 
 Shader archive format
+
+[Documentation](https://github.com/kinnay/Nintendo-File-Formats/wiki/SHARCFB-File-Format)
 
 ## .skybin
 > **Sky** **Bin**ary 
@@ -343,6 +359,8 @@ SARC archive for terrain data
 
 ## .tscb
 > **T**errain **Sc**ene **B**inary
+
+[ZeldaMods Documentation](https://zeldamods.org/wiki/TSCB)
 
 ## .txt
 
