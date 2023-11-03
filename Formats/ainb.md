@@ -6,7 +6,7 @@ AINB (**A**rtificial **I**ntelligence **N**ode **B**inary) is a binary file form
 
 AINB is a little endian format similar to most Switch file formats. The file contains a series of interconnected notes and even references to other AINB files. When a command from the file is run, it pushes the corresponding root node onto a run array, adding that node’s linked child nodes and updating each one in order as it iterates through the array.
 
-Name offsets are relative to the start of the string pool. Name hashes are 32-bit Murmur3 hashes. There are six data types referenced in the file: int, bool, float, string, vector3f, and user-defined type. When parameters are listed or referenced, they always come in this order. User-defined types do not have value definitions unlike the other types and values written to them are pointers to the corresponding object.
+Name offsets are relative to the start of the string pool. Name hashes are 32-bit Murmur3 hashes. There are six data types referenced in the file: int, bool, float, string, vector3f, and user-defined type. When parameters are listed or referenced, they always come in this order. User-defined types do not have value definitions unlike the other types and values written to them are pointers to the corresponding object. 
 
 # Section Order
 
@@ -254,7 +254,7 @@ All AINB files begin with a 0x74 byte header structured as follows (note: if a s
    </td>
    <td>u32
    </td>
-   <td>File Category (0 = AI, 1 = Logic, 2 = Sequence) - only TotK
+   <td>File Category (0 = AI, 1 = Logic, 2 = Sequence) - only TotK, purpose unknown in other games
    </td>
   </tr>
   <tr>
@@ -769,7 +769,7 @@ The node types are as follows:
 </table>
 
 
-For UserDefined nodes, node definitions can be found in a node definitions file. This file is located at NodeDefinition/Node.Product.[ver].aidefn.byml.zs in the corresponding file category folder. Other nodes are defined as follows:
+For UserDefined nodes, the node name becomes the node type (with the exception of nodes which represent an external AINB file) and node definitions can be found in a node definitions file. This file is located at NodeDefinition/Node.Product.[ver].aidefn.byml.zs in the corresponding file category folder. Not all UserDefined node types have a definition in NodeDefinition, however. For nodes that represent an external AINB file, the name of the node becomes the filename (without the extension). Other nodes are defined as follows:
 
 
 <table>
@@ -969,7 +969,7 @@ The node flag bit field is mapped as follows:
   <tr>
    <td>1
    </td>
-   <td>Is Resident Node
+   <td>Is Resident Node (stays in memory as long as the file is loaded)
    </td>
   </tr>
   <tr>
@@ -2087,25 +2087,25 @@ The parameter flags are mapped as follows:
   <tr>
    <td>1
    </td>
-   <td>Unknown
+   <td>Unknown (likely specifies where index is used)
    </td>
   </tr>
   <tr>
    <td>1
    </td>
-   <td>Unknown
+   <td>Unknown (likely specifies where index is used)
    </td>
   </tr>
   <tr>
    <td>1
    </td>
-   <td>Unknown
+   <td>Unknown (likely specifies where index is used)
    </td>
   </tr>
   <tr>
    <td>1
    </td>
-   <td>Unknown
+   <td>Unknown (likely specifies where index is used)
    </td>
   </tr>
   <tr>
@@ -2369,25 +2369,25 @@ The parameter flags are mapped as follows (identical to flags for immediate para
   <tr>
    <td>1
    </td>
-   <td>Unknown
+   <td>Unknown (likely specifies where index is used)
    </td>
   </tr>
   <tr>
    <td>1
    </td>
-   <td>Unknown
+   <td>Unknown (likely specifies where index is used)
    </td>
   </tr>
   <tr>
    <td>1
    </td>
-   <td>Unknown
+   <td>Unknown (likely specifies where index is used)
    </td>
   </tr>
   <tr>
    <td>1
    </td>
-   <td>Unknown
+   <td>Unknown (likely specifies where index is used)
    </td>
   </tr>
   <tr>
@@ -2528,25 +2528,25 @@ The parameter flags are mapped as follows (identical to the immediate/input para
   <tr>
    <td>1
    </td>
-   <td>Unknown
+   <td>Unknown (likely specifies where index is used)
    </td>
   </tr>
   <tr>
    <td>1
    </td>
-   <td>Unknown
+   <td>Unknown (likely specifies where index is used)
    </td>
   </tr>
   <tr>
    <td>1
    </td>
-   <td>Unknown
+   <td>Unknown (likely specifies where index is used)
    </td>
   </tr>
   <tr>
    <td>1
    </td>
-   <td>Unknown
+   <td>Unknown (likely specifies where index is used)
    </td>
   </tr>
   <tr>
@@ -2674,7 +2674,7 @@ The EXB section is essentially a self-contained file within a file - all referen
    </td>
    <td>u32
    </td>
-   <td>Parameter EXB Field Entry Count
+   <td>EXB Function Call Count (total number of function calls by nodes)
    </td>
   </tr>
   <tr>
@@ -3075,7 +3075,7 @@ The command types are as follows:
    </td>
    <td>22
    </td>
-   <td>AND
+   <td>AND (Bitwise)
    </td>
   </tr>
   <tr>
@@ -3083,7 +3083,7 @@ The command types are as follows:
    </td>
    <td>23
    </td>
-   <td>XOR
+   <td>XOR (Bitwise)
    </td>
   </tr>
   <tr>
@@ -3091,7 +3091,7 @@ The command types are as follows:
    </td>
    <td>24
    </td>
-   <td>OR
+   <td>OR (Bitwise)
    </td>
   </tr>
   <tr>
@@ -3164,7 +3164,7 @@ The data type enums are as follows:
    </td>
    <td>1
    </td>
-   <td>Immediate Value/From User
+   <td>Immediate Value/From User (only used in command info and not instructions)
    </td>
   </tr>
   <tr>
@@ -3564,7 +3564,7 @@ This section is unused in TotK but used extensively in games such as Splatoon 3 
 
 ## String Pool
 
-The string pool is an array of null-terminated strings that are used in the file. References to the string pool are relative to the beginning of the string pool. Strings are encoded with UTF-8 and occasionally contain Japanese text.
+The string pool is an array of null-terminated strings that are used in the file. References to the string pool are relative to the beginning of the string pool. Strings are encoded with UTF-8 and occasionally contain Japanese text. Not all strings in the string pool are referenced in the file. This is probably because those strings are enums that can be referenced by nodes as their parameters are updated.
 
 # Notes
 
