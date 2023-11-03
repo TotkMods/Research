@@ -47,6 +47,8 @@ Extensions:
 
 Node-based AI and logic format
 
+[Documentation here](Formats/ainb.md)
+
 Python library available here:
 https://github.com/dt-12345/ainb
 
@@ -127,7 +129,7 @@ BYML v7, several new node types added
 ## .bhtmp
 > **B**inary **H**eigh**t** **M**a**p**
 
-Height related data. Explenation on structure [here](Formats/bhtmp.md).
+Height related data. Explanation on structure [here](Formats/bhtmp.md).
 
 ## .bkres
 > **B**a**k**e **Res**ource (???)
