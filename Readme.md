@@ -8,134 +8,200 @@ File research for Tears of the Kingdom
 
 ***Files can be decompressed with [Totk.ZStd Tool](https://github.com/TotkMods/Totk.ZStdTool)***
 
+Dictionaries found in `romfs/Pack/ZsDic.pack.zs`
+
+## .aamp
+
+Parameter files (same as *BotW*)
+
+Relatively rare and mostly exist under other extensions (also found embedded in Phive files)
+
+Extensions:
+- .baglblm - **B**inary **agl** **Bl**oo**m**
+  - Stores bloom data
+- .baglccr - 
+- .baglclwd - 
+- .baglcube - 
+- .bagldof - 
+- .baglenv - **B**inary **agl** **Env**ironment
+- .baglenvset - **B**inary **agl** **Env**ironment **Set**ting
+- .baglfila - 
+- .bagllmap - 
+- .baglmf
+  - Stores filter data
+- .baglshpp - 
+- .baglsky - **B**inary **agl** **Sky** (???)
+- .bgapkginfo - 
+- .bgapkglist - 
+- .bgenv - 
+- .bglght - 
+- .bgmsconf - 
+- .bgsdw - 
+- .bphhb - **B**inary **Ph**ive **H**elper **B**one
+  - Stores helper bone data
+- .bptcl - **B**inary **P**ar**t**i**cl**e
+- .bptclconf - **B**inary **P**ar**t**i**cl**e **Conf**iguration
+
 ## .ainb
+> **AI** **N**ode **B**inary
 
-**AI** **N**ode **B**inary
+Node-based AI and logic format
 
-Python library availible here:
+Python library available here:
 https://github.com/dt-12345/ainb
 
 ## .asb
+> **A**nimation **S**equence **B**inary
 
-```
-...
-```
+Node-based animation sequence format
 
 ## .baatarc
-
-```
-...
-```
+> **B**inary **A**udio **At**tenuation **Arc**hive
 
 ## .baev
-
-```
-...
-```
+> **B**inary **A**nimation **Ev**ent
 
 ## .bagst
-
-```
-...
-```
+> **B**inary **A**udio **G**roup **S**e**t**tings
 
 ## .bars
+> **B**inary **A**udio **R**e**s**ource
 
-Audio archive format (unknown changes from Botw)
+Audio resource archive (unknown changes from *BotW*)
 
 ## .bcul
+> **B**inary **Cul**ling
 
-```
-...
-```
+Stores area culling data
 
 ## .beco
+> **B**inary **Eco**system
 
-Likely part of the LoadMgr from [Botw](https://zeldamods.org/wiki/LoadBalancer.beco)
+Stores per-coordinate data
+
+[ZeldaMods Article](https://zeldamods.org/wiki/Beco)
 
 ## .belnk
+> **B**inary **EL**i**n**k2
 
-Likely the XLink2 file format from Botw and Splatoon (ELink variant)
+XLink2 file format for ELink2 (similar to the XLink2 Thunder format from *Splatoon 3*)
+
+[Shadow's XLink2 Library Recreation](https://github.com/shadowninja108/WoomLink)
 
 ## .bfarc
+> **B**inary **F**ont **Arc**hive
 
-```
-...
-```
+SARC font archive
+
+## .bfcpx
+
+Font format
 
 ## .bfevfl
+> **B**inary Ca**f**é **Ev**ent **Fl**ow
 
-Eventflow file format v1 (no noted changes from Botw)
+Event flow and event timeline format (minor changes from *BotW*)
+
+## .bflan
+> **B**inary Ca**f**é **L**ayout **An**imation
+
+Layout animation format
 
 ## .bfres
+> **B**inary Ca**f**é **Res**ource
+
+Archive format for animations, textures, and models
 
 BFRES v10
 
 ## .bfsha
-
-```
-...
-```
+> **B**inary Ca**f**é **Sha**der
 
 ## .bgyml
+> **B**inary **G**enerated **Y**A**ML** (???)
 
-BYML v7, unknown changes from v4 (except version in header)
+BYML v7, new node types added
 
 ## .bhtmp
+> **B**inary **H**eigh**t** **M**a**p**
+
 Height related data. Explenation on structure [here](Formats/bhtmp.md).
 
 ## .bkres
+> **B**a**k**e **Res**ource (???)
 
-SARC archive with one (?) BYML file inside of it
+SARC archive with one (?) BYML file inside of it, stores bake info
+
+## .blal
+> **B**inary **L**ooped **A**sset **L**ist
+
+Stores hashes of looped audio assets
+
+[Python Library from *BotW*](https://github.com/GingerAvalanche/blal)
 
 ## .blarc
+> **B**inary **L**ayout **Arc**hive
 
-```
-...
-```
+SARC layout archive
 
 ## .blwp
 
-```
-...
-```
+Stores forest and tree data, multipe types exist under the same extension (shared 8 byte header)
 
 ## .bnsh
-
-```
-...
-```
+> **B**inary **N**X **Sh**ader
 
 ## .bntx
+> **B**inary **N**X **T**e**x**ture
 
 Texture archive (unknwon changes from Botw 1.6.0)
+
+## .bnvib
+> **B**inary **Vib**ration
+
+HD Rumble data format
+
+[SwitchBrew Documentation](https://switchbrew.org/wiki/BNVIB)
+
+## .bphcl
+> **B**inary **Ph**ive **Cl**oth
+
+Phive cloth physics format (Phive is a library that extends Havok)
 
 ## .bphnm
 > **B**inary **Ph**ive **N**av **M**esh
 
-Updated havok file format (Phive) used for NavMesh
+Phive NavMesh format (Phive is a library that extends Havok)
 
 ## .bphsc
 > **B**inary **Ph**ive **S**tatic **C**ompound
 
-Updated havok file format (Phive) used for StaticCompound
+Phive format for static compounds (Phive is a library that extends Havok)
 
 ## .bphsh
 > **B**inary **Ph**ive **Sh**ape
 
-Updated havok file format (Phive) used for RigidBodies (Shapes)
+Phive format for rigid bodies (Shapes) (Phive is a library that extends Havok)
 
 ## .bslnk
+> **B**inary **SL**i**nk**2
 
-Likely the XLink2 file format from Botw and Splatoon (SLink variant)
+XLink2 file format for SLink2 (similar to the XLink2 Thunder format from *Splatoon 3*)
+
+[Shadow's XLink2 Library Recreation](https://github.com/shadowninja108/WoomLink)
 
 ## .bstar
 
-```
-...
-```
+Stores strings (purpose unknown), format is documented
+
+## .bushvt
+
+Some type of shader format
 
 ## .bwav
+> **B**inary **WAV**
+
+Audio resource format
 
 Most bwav files seem to play fine in [foobar2000](https://www.foobar2000.org/) (with the [vgmStream](https://github.com/vgmstream/vgmstream) plugin), however some files (notably in the `Voice/Resource/XXcc/EventFlowMsg` folders) fail to play. The headers of these files appear to have an incorrect sample count.
 
@@ -144,21 +210,28 @@ Unable to open item for playback (Unsupported format or corrupted file):
 "F:\Games\Totk\Voice\Resource\USen\EventFlowMsg\Dm_BZ_0007_Stream\Dm_BZ_0007_Text_002_b.bwav"
 ```
 
-## .byml
+## .byaml
+> **B**inary **YAML**
 
-BYML v7, unknown changes from v4 (except version in header)
+See [.byml](#.byml)
+
+## .byml
+> **B**inary **Y**A**ML**
+
+BYML v4 or v7 (.esetb.byml is v5 and contains an embedded .ptcl file)
 
 ## .cai
+> **C**ombined **A**ctor **I**nfo
 
-```
-...
-```
+Stores position and rotation data for Autobuild constructions
+
+.totkab also exists which is the same format but with an additional header
+
+[Graphical CAI Editor]()
 
 ## .chunk
 
-```
-...
-```
+Cave chunked mesh info
 
 ## .crbin
 
@@ -167,31 +240,55 @@ BYML v7, unknown changes from v4 (except version in header)
 ```
 
 ## .cutinfo
-
-```
-...
-```
+> **Cut**scene **Info**
 
 ## .dpi
+> **D**estructible **P**iece **I**nfo
 
-```
-...
-```
+## .extm
+
+Material data
 
 ## .genvb
+> **G**ame **Env**ironment **B**inary (???)
 
-```
-...
-```
+SARC archive for environmental effects
+
+## .gsh
+> **G**X2 **Sh**ader
+
+Shader format
+
+## .glsl
+> Open**GL** **S**hading **L**anguage (???)
+
+Shader format
+
+## .hght
+> **H**ei**ght**
+
+Height map format (no noted changes since *BotW*)
 
 ## .jpg
 
 Digital image format
 
+## .mate
+> **Mate**rial
+
+Material data format (no noted changes since *BotW*)
+
 ## .mc
-> MCPK
+> **M**esh**C**odec
+
+MCPK
 
 MeshCodec, an archive/compression format wrapped around the model fles (bfres v10)
+
+## .msbt
+> **M**essage **S**tudio **B**inary **T**ext
+
+Stores text data and localization info
 
 ## .pack
 
@@ -201,51 +298,70 @@ SARC archives, no noted changes from Botw
 
 I don't think I need to explain this one
 
+## .ptcl
+> **P**ar**t**i**cl**e
+
+Stores particle effects data, only found embedded in .esetb.byml files
+
 ## .quad
 
 ```
 ...
 ```
 
+## .raw
+
+Only used by one file (`arrow.raw`)
+
 ## .rsizetable
+> **R**esource **Size Table**
 
 Updated RSTB table (RESTBL), spec can be found in [Totk.Analyze/src/Formats/RESTBL.cs](https://github.com/TotkMods/Totk.Analyze/blob/master/Totk.Analyze/Formats/RESTBL.cs)
 
 ## .sarc
+> **S**tandard **Arc**hive (???)
 
 SARC archives (see [.pack](#pack))
 
-## .ta
+## .sav
+> **Sav**e
 
-```
-...
-```
+Save data file format
+
+## .sharcb
+> **Sh**ader **Arc**hive **B**inary
+
+Shader archive format
+
+## .skybin
+> **Sky** **Bin**ary 
+
+## .ta
+> **T**errain **A**rchive (???)
+
+SARC archive for terrain data
 
 ## .tscb
-
-```
-...
-```
+> **T**errain **Sc**ene **B**inary
 
 ## .txt
 
 I think you can manage this one
 
 ## .txtg
+> **T**e**x** **T**o **G**o
 
 TexToGo texture format
 
 ## .vsts
+> **V**olume **St**at**s**
 
-```
-...
-```
+Exists in two variants: volume stats (magic = VSTS) and grass stats (magic = GSTS)
 
 ## .wbr
+> **W**eapon **B**lu**r**
 
-```
-...
-```
+Weapon blur file format
 
 ## .webm
 
