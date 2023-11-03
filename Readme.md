@@ -27,7 +27,7 @@ Extensions:
 - .baglenvset - **B**inary **agl** **Env**ironment **Set**ting
 - .baglfila - 
 - .bagllmap - 
-- .baglmf
+- .baglmf - 
   - Stores filter data
 - .baglshpp - 
 - .baglsky - **B**inary **agl** **Sky** (???)
@@ -47,6 +47,8 @@ Extensions:
 
 Node-based AI and logic format
 
+Files themselves serve as nodes in larger file trees (.root.ainb vs .module.ainb)
+
 [Documentation here](Formats/ainb.md)
 
 Python library available here:
@@ -56,6 +58,8 @@ https://github.com/dt-12345/ainb
 > **A**nimation **S**equence **B**inary
 
 Node-based animation sequence format
+
+[Format Notes](https://docs.google.com/document/d/1iAgTwK0otUaDvb_0Si0TJYiQa7BeI4qNWAX54WUiXTo/edit)
 
 ## .baatarc
 > **B**inary **A**udio **At**tenuation **Arc**hive
@@ -104,7 +108,7 @@ Font format
 ## .bfevfl
 > **B**inary Ca**f**é **Ev**ent **Fl**ow
 
-Event flow and event timeline format (minor changes from *BotW*)
+Event flow and event timeline format (minor changes from *BotW*, [PR pending for EVFL library](https://github.com/zeldamods/evfl/pull/5))
 
 ## .bflan
 > **B**inary Ca**f**é **L**ayout **An**imation
@@ -152,13 +156,21 @@ SARC layout archive
 
 Stores forest and tree data, multipe types exist under the same extension (shared 8 byte header)
 
+### BLWP Header
+
+| Offset | Type    | Value          |
+|--------|---------|----------------|
+| 0x00   | u16     | Unknown        |
+| 0x02   | u16     | Unknown        |
+| 0x04   | u32     | Section 1 Entry Count    |
+
 ## .bnsh
 > **B**inary **N**X **Sh**ader
 
 ## .bntx
 > **B**inary **N**X **T**e**x**ture
 
-Texture archive (unknwon changes from Botw 1.6.0)
+Texture archive (unknown changes from Botw 1.6.0)
 
 ## .bnvib
 > **B**inary **Vib**ration
@@ -166,6 +178,11 @@ Texture archive (unknwon changes from Botw 1.6.0)
 HD Rumble data format
 
 [SwitchBrew Documentation](https://switchbrew.org/wiki/BNVIB)
+
+## .bofx
+> **B**inary **O**cclusion **FX**
+
+BFRES archive for occlusion effects
 
 ## .bphcl
 > **B**inary **Ph**ive **Cl**oth
@@ -196,7 +213,14 @@ XLink2 file format for SLink2 (similar to the XLink2 Thunder format from *Splato
 
 ## .bstar
 
-Stores strings (purpose unknown), format is documented
+Stores strings (purpose unknown, found in `romfs/Preload`)
+
+| Offset | Type    | Value          |
+|--------|---------|----------------|
+| 0x00   | char[4] | Magic ("STAR") |
+| 0x04   | u32     | Version        |
+| 0x08   | u32     | Entry Count    |
+| 0x0c   | u32[]   | Array of entries|
 
 ## .bushvt
 
@@ -226,6 +250,42 @@ See [.byml](#.byml)
 
 BYML v4 or v7 (.esetb.byml is v5 and contains an embedded .ptcl file)
 
+[ZeldaMods Article](https://zeldamods.org/wiki/BYML)
+
+#### v7 Node Types (courtesy of Watertoon)
+
+Note: v7 root nodes can be 0x20, 0x21, 0xC0, or 0xC1 (warning: this breaks a lot of BYML tools)
+
+```c
+enum class ByamlDataType : u8 {
+    HashArrayU32_1           = 0x20,
+    HashArrayU32_2           = 0x21,
+    ...
+    HashArrayU32_16          = 0x2f,
+    HashArrayWithRemapU32_1  = 0x30,
+    HashArrayWithRemapU32_2  = 0x31,
+    ...
+    HashArrayWithRemapU32_16 = 0x3f,
+    StringIndex              = 0xa0,
+    BinaryData               = 0xa1,
+    BinaryDataWithAlignment  = 0xa2,
+    Array                    = 0xc0,
+    Dictionary               = 0xc1,
+    KeyTable                 = 0xc2,
+    DictionaryWithRemap      = 0xc4,
+    RelocatedKeyTable        = 0xc5,
+    MonoTypedArray           = 0xc8,
+    Bool                     = 0xd0,
+    S32                      = 0xd1,
+    F32                      = 0xd2,
+    U32                      = 0xd3,
+    S64                      = 0xd4,
+    U64                      = 0xd5,
+    F64                      = 0xd6,
+    Null                     = 0xff,
+};
+```
+
 ## .cai
 > **C**ombined **A**ctor **I**nfo
 
@@ -241,9 +301,7 @@ Cave chunked mesh info
 
 ## .crbin
 
-```
-...
-```
+Cave-related info
 
 ## .cutinfo
 > **Cut**scene **Info**
@@ -259,6 +317,11 @@ Material data
 > **G**ame **Env**ironment **B**inary (???)
 
 SARC archive for environmental effects
+
+## .genvres
+> **G**ame **Env**ironment **Res**ource (???)
+
+BFRES archive for environmental effects
 
 ## .gsh
 > **G**X2 **Sh**ader
