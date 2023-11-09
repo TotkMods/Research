@@ -252,6 +252,8 @@ BYML v4 or v7 (.esetb.byml is v5 and contains an embedded .ptcl file)
 
 [ZeldaMods Article](https://zeldamods.org/wiki/BYML)
 
+[ZeldaMods EPD Wiki Article](https://epd.zeldamods.org/wiki/Byaml)
+
 #### v7 Node Types (courtesy of Watertoon)
 
 Note: v7 root nodes can be 0x20, 0x21, 0xC0, or 0xC1 (warning: this breaks a lot of BYML tools)
@@ -312,6 +314,11 @@ Cave-related info
 ## .extm
 
 Material data
+
+## .figi
+> **Fig**ure **I**nfo
+
+Tarrey Town monster figure data
 
 ## .genvb
 > **G**ame **Env**ironment **B**inary (???)
@@ -443,7 +450,7 @@ TexToGo texture format. C# implementation by KillzXGaming in [Switch ToolBox](ht
 ## .vsts
 > **V**olume **St**at**s**
 
-Exists in two variants: volume stats (magic = VSTS) and grass stats (magic = GSTS)
+Exists in three variants: volume stats (magic = VSTS), grass stats (magic = GSTS), and cave stats (magic = CSTS)
 
 ## .wbr
 > **W**eapon **B**lu**r**

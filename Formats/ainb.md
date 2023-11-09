@@ -1442,7 +1442,7 @@ The node body section is made up of two parts: a 0x90-byte parameter section and
    </td>
    <td>u32
    </td>
-   <td>User-Defined TypeOutput Reference Parameter Base Index
+   <td>User-Defined Type Output Reference Parameter Base Index
    </td>
   </tr>
   <tr>
@@ -1450,7 +1450,7 @@ The node body section is made up of two parts: a 0x90-byte parameter section and
    </td>
    <td>u32
    </td>
-   <td>User-Defined TypeOutput Reference Parameter Count
+   <td>User-Defined Type Output Reference Parameter Count
    </td>
   </tr>
   <tr>
@@ -2069,7 +2069,7 @@ The parameter flags are mapped as follows:
   <tr>
    <td>16
    </td>
-   <td>Global/EXB Index
+   <td>Index
    </td>
   </tr>
   <tr>
@@ -2351,7 +2351,7 @@ The parameter flags are mapped as follows (identical to flags for immediate para
   <tr>
    <td>16
    </td>
-   <td>Global/EXB Index
+   <td>Index
    </td>
   </tr>
   <tr>
@@ -2510,7 +2510,7 @@ The parameter flags are mapped as follows (identical to the immediate/input para
   <tr>
    <td>16
    </td>
-   <td>Global/EXB Index
+   <td>Index
    </td>
   </tr>
   <tr>

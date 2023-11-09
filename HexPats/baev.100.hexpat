@@ -1,4 +1,4 @@
-// By Watertoon
+// By Watertoon, updated by dt12345
 
 #pragma pattern_limit 2000000
 
@@ -69,8 +69,8 @@ struct ResBaevEventArray1 {
 
 struct ResBaevEvent {
     u64                              name;
-    ResBaevArray<u8>                 array0;
-    ResBaevArray<ResBaevEventArray1> array1;
+    ResBaevArray<ResBaevEventArray1> TriggerArray;
+    ResBaevArray<ResBaevEventArray1> HoldArray;
     u32                              reserve0;
     u32                              reserve1;
     
@@ -80,12 +80,12 @@ struct ResBaevEvent {
 /* Event node */
 struct ResBaevEventNode {
     u64 event;
-    u32 reserve0;
+    u32 count;
     u32 name_offset;
     u32 hash;
     u32 reserve1;
     
-    ResBaevEvent o_event @ event;
+    ResBaevEvent o_event[count] @ event;
 };
 
 /* Container */
