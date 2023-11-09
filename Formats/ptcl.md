@@ -22,15 +22,15 @@ Some of this is based on [Deep Sea Knowledge's PTCL article](https://wiki.oatmea
 
 # Section Header Base
 
-All section headers share a similar structure for the first 20 bytes.
+All section headers share a similar structure for the first 20 bytes, offset will be -1 if not applicable.
 
-| Offset | Data Type | Value                                           |
-|--------|-----------|-------------------------------------------------|
-| 0x00   | char[4]   | Magic                                           |
-| 0x04   | u32       | Size (what the size is of can vary)             |
-| 0x08   | s32       | Subsection Array Offset                         |
-| 0x0C   | s32       | Next Entry Offset (in subsection array)         |
-| 0x10   | s32       | Next Sub-Entry Offset (in subsection array)     |
+| Offset | Data Type | Value                                |
+|--------|-----------|--------------------------------------|
+| 0x00   | char[4]   | Magic                                |
+| 0x04   | u32       | Size (what the size is of can vary)  |
+| 0x08   | s32       | Subsection Array Offset              |
+| 0x0C   | s32       | Next Section/Subsection Offset       |
+| 0x10   | s32       | Next Sub-Subsection Offset           |
 
 # ESTA Section
 > **E**mitter **S**e**t** **A**rray
@@ -70,18 +70,28 @@ This section contains a section header followed by data followed by subsections.
 | 0x18   | ???       | Unknown                                         |
 |        | char[]    | Emitter Name                                    |
 
-# Other Sub-Subsections
+# File Structure
+Not all sections may be present
 
-CSDP, CADP, FRND, FCSF
-
-# Other Sections
-
-PRMA (**Pr**i**m**itive **A**rray) - structure is the same as ESTA except instead of ESET subsections, it contains PRIM (**Prim**itive) subsections
-
-TRMA - ??? (structure is presumably the same as above)
-
-G3PR - same structure, has G3NT subsection, contains an embedded BFRES file
-
-GRSN - (**G**raphics **R**es **S**hader **N**ormal) - same structure as above, has GRSC (**G**raphics **R**es **S**hader **C**ompute) subsection, contains an embedded BNSH file
-
-GRRE - ??? same structures as above, has GRCE subsection
+- PTCL
+  - ESTA
+    - ESET
+      - EMTR
+      - CSDP
+      - CADP
+      - FCSF
+      - FRND
+  - PRMA
+    - PRIM
+  - TRMA
+  - GRTF (haven't seen this in *TotK*)
+    - GTNT // contains BNTX
+  - G3PR
+    - G3NT // contains BFRES
+  - GRSN
+    - GRSR // contains BNSH
+    - GRRI
+    - GRSC
+    - GRRE
+    - GRCE
+    - GRCI
