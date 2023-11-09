@@ -108,7 +108,7 @@ Font format
 ## .bfevfl
 > **B**inary Ca**f**é **Ev**ent **Fl**ow
 
-Event flow and event timeline format (minor changes from *BotW*, [PR pending for EVFL library](https://github.com/zeldamods/evfl/pull/5))
+Event flow and event timeline format (minor changes from *BotW*, [PR pending for EVFL library](https://github.com/zeldamods/evfl/pull/5), [fixed in BFEV Library (C#)](https://github.com/NCF-Library/BfevLibrary))
 
 ## .bflan
 > **B**inary Ca**f**é **L**ayout **An**imation
@@ -345,7 +345,7 @@ Shader format
 ## .hght
 > **H**ei**ght**
 
-Height map format (no noted changes since *BotW*)
+Height map format (no noted changes from *BotW*)
 
 [Documentation](https://github.com/handsomematt/botw-modding/blob/master/docs/file_formats/hght.md)
 
@@ -367,6 +367,8 @@ MCPK
 
 MeshCodec, an archive/compression format wrapped around the model fles (bfres v10)
 
+Can be decompressed using an interop script for TotK, written by Watertoon: https://gamebanana.com/tools/13236
+
 ## .msbt
 > **M**essage **S**tudio **B**inary **T**ext
 
@@ -374,9 +376,11 @@ Stores text data and localization info
 
 [Documentation](https://acmods.org/wiki/New_Horizons:MSBT) and [Functions](https://acmods.org/wiki/New_Horizons:MSBT_functions)
 
+[C++ implementation](https://github.com/EPD-Libraries/msbt)
+
 ## .pack
 
-SARC archives, no noted changes from Botw
+SARC archives, no noted changes from BotW
 
 ## .png
 
@@ -441,7 +445,7 @@ I think you can manage this one
 ## .txtg
 > **T**e**x** **T**o **G**o
 
-TexToGo texture format
+TexToGo texture format. C# implementation by KillzXGaming in [Switch ToolBox](https://github.com/KillzXGaming/Switch-Toolbox/blob/master/File_Format_Library/FileFormats/Texture/TXTG.cs)
 
 ## .vsts
 > **V**olume **St**at**s**
