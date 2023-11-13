@@ -84,6 +84,6 @@ The extra info entries are structured as follows:
 | 0x28   | u32[6]    | Unknown                             |
 
 # String Pool
-Array of null-terminated strings - strings referenced by the first section must be aligned on four bytes.
+Array of null-terminated strings - strings must be aligned on four bytes.
 
 Encoding is UTF-8 with the exception of the Japanese name strings.
