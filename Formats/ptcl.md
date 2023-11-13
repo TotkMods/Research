@@ -61,7 +61,7 @@ This section contains a section header followed by an array of EMTR sub-subsecti
 # EMTR Sub-Subsection
 > **Em**i**t**te**r**
 
-This section contains a section header followed by data followed by subsections.
+This section contains a section header followed by data followed by data.
 
 | Offset | Data Type | Value                                           |
 |--------|-----------|-------------------------------------------------|
@@ -109,7 +109,7 @@ Not all sections may be present
   - PRMA
     - PRIM
   - TRMA
-  - GRTF (unused *TotK*, textures are in `romfs/TexToGo`)
+  - GRTF (unused in *TotK*, textures are in `romfs/TexToGo`)
     - GTNT // contains BNTX
   - G3PR
     - G3NT // contains BFRES
