@@ -436,7 +436,7 @@ SARC archive for terrain data
 ## .tscb
 > **T**errain **Sc**ene **B**inary
 
-[ZeldaMods Documentation](https://zeldamods.org/wiki/TSCB)
+[Documentation here](Formats/tscb.md)
 
 ## .txt
 

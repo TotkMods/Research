@@ -77,21 +77,46 @@ Not all sections may be present
   - ESTA
     - ESET
       - EMTR
-      - CSDP
       - CADP
+      - CSDP
+      - EAA0
+      - EAA1
+      - EAC0
+      - EAC1
+      - EADV
+      - EAER
+      - EAES
+      - EAET
+      - EAGV
+      - EAOV
+      - EAPL
+      - EAPL
+      - EASL
+      - EASS
+      - EATR
+      - EP01
+      - EP02
+      - EP03
+      - EP04
+      - FCLN
+      - FCOL
+      - FCOV
       - FCSF
+      - FMAG
+      - FRN1
       - FRND
+      - FSPN
   - PRMA
     - PRIM
   - TRMA
-  - GRTF (haven't seen this in *TotK*)
+  - GRTF (unused *TotK*, textures are in `romfs/TexToGo`)
     - GTNT // contains BNTX
   - G3PR
     - G3NT // contains BFRES
   - GRSN
     - GRSR // contains BNSH
     - GRRI
-    - GRSC
+    - GRSC // contains BNSH
     - GRRE
     - GRCE
     - GRCI
