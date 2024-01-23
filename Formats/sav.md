@@ -99,7 +99,7 @@ GameData is a system used in *Tears of the Kingdom* to store flags, usually for 
 * WString64 (unused)
 * WString64Array (unused)
 * Struct
-    * Organizes Bool64bitKey values into structs
+    * Organizes other GameData flags into structs
 * BoolExp
     * Bool values that are dependent on other GameData flags (hence the **Exp**ression)
 * Bool64bitKey
