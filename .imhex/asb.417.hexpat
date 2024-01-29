@@ -109,6 +109,7 @@ struct TriggerEvent {
     float start_frame;
     
     ValueEntry entry @ entry_offset;
+    char name[] @ header.string_pool_offset + name_offset;
 };
 
 struct HoldEvent {
@@ -121,6 +122,7 @@ struct HoldEvent {
     float end_frame;
     
     ValueEntry entry @ entry_offset;
+    char name[] @ header.string_pool_offset + name_offset;
 };
 
 struct ResEventInfo {
@@ -526,6 +528,8 @@ struct ResTexAnim {
     u32 reserve3;
     u32 reserve4;
     ResConnection connections;
+    
+    char name[] @ header.string_pool_offset + name_offset;
 };
 
 struct ResFrameCtrl {

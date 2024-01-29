@@ -4,6 +4,12 @@
 
 using ResBaev;
 
+struct Vector3f {
+    float x;
+    float y;
+    float z;
+};
+
 /* Common */
 struct ResBaevHeader {
     u32 magic;
@@ -35,42 +41,42 @@ struct ResBaevEventHash {
 };
 
 /* Event 1 */
-struct ResBaevEvent1 {
+struct ResBaevEventParameter {
     u32 type;
-    u32 reserve0;
+    padding[4];
     
     if (type == 0) {
-        u32 reserve1;
-        u32 reserve2;
+        u32 value;
+        padding[4];
+    } else if (type == 1) { 
+        float value;
+        padding[4];
     } else if (type == 3) {
-        u32 reserve1;
-        u32 reserve2;
-        u32 reserve3;
-        u32 reserve4;
+        Vector3f value;
+        padding[4];
     } else if (type == 5) {
-        u64  bone_name;
-        
-        char o_bone_name[] @ bone_name;
+        u64  name_offset;
+        char value[] @ name_offset;
     }
 };
 
-struct ResBaevEvent1Offset {
-    u64 event1;
+struct ResBaevEventParameterArray {
+    u64 parameter_entry;
     
-    ResBaevEvent1 o_event1 @ event1;
+    ResBaevEventParameter parameter @ parameter_entry;
 };
 
 /* Event */
-struct ResBaevEventArray1 {
-    ResBaevArray<ResBaevEvent1Offset> reserve0;
-    u32                               reserve1;
-    float                             reserve2;
+struct ResBaevEventData {
+    ResBaevArray<ResBaevEventParameterArray> parameters;
+    float                             start_frame;
+    float                             end_frame;
 };
 
 struct ResBaevEvent {
     u64                              name;
-    ResBaevArray<ResBaevEventArray1> TriggerArray;
-    ResBaevArray<ResBaevEventArray1> HoldArray;
+    ResBaevArray<ResBaevEventData> trigger_array;
+    ResBaevArray<ResBaevEventData> hold_array;
     u32                              reserve0;
     u32                              reserve1;
     
@@ -81,7 +87,7 @@ struct ResBaevEvent {
 struct ResBaevEventNode {
     u64 event;
     u32 count;
-    u32 name_offset;
+    u32 size;
     u32 hash;
     u32 reserve1;
     
